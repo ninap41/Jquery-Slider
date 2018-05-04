@@ -1215,7 +1215,7 @@ tspan {
 /** Timeline Content Styles **/
 
 #timeline-container {
-  position: absolute;
+  position: relative;
   display: inline-block;
   width: 65100px;
   left: 1000px;
