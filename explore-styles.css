@@ -6,7 +6,8 @@ body {
 	background: radial-gradient(#293c51, #0a1a25);
 	background-position: fixed;
 	background-repeat: no-repeat;
-	background-size: cover; 
+  background-size: cover; 
+  width: 100%;
 	margin: 0;
   overflow: hidden;
   zoom: 67%;
@@ -31,14 +32,14 @@ body {
 .container {
 	margin: 0 auto;
 	box-sizing: border-box;
-	height: 200vh;
+	height: 150vh;
 	padding-top: 15px;
 }
 
 .container-tl {
 	margin: 0 auto;
 	box-sizing: border-box;
-	height: 200vh;
+	height: 150vh;
 	padding-top: 15px;
 	overflow-x: hidden;
 	overflow-y: hidden;

@@ -341,114 +341,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praes
 <script type="text/javascript" charset="utf-8">
 
 
-
-
-// // start listening for events and trigger functions 'handleTouchStart' and 'handleTouchMove'
-document.addEventListener('touchstart', handleTouchStart, false);        
-document.addEventListener('touchmove', handleTouchMove, false);
-
-var xDown = null; // x value of initial touch
-var yDown = null; // y value of initial touch
-var touchFire = true; // if the touch action will fire or not
-var delay = 1500; // delay on touch action firing
-
-function handleTouchStart(evt) {      
- // gets initial touch position
-    xDown = evt.touches[0].clientX;                                      
-    yDown = evt.touches[0].clientY;                                      
-};                                                
-
-function handleTouchMove(evt) {
-
-  if(touchFire){ // if touch action can fire
-    touchFire = false; // disable touch action
-    if ( !xDown || !yDown ) {
-        return;
-    }
-
-    var xUp = evt.touches[0].clientX; // x value of where user stops touching surface                               
-    var yUp = evt.touches[0].clientY; // y value of where user stops touching surface
-
-    var xDiff = xDown - xUp; // subtract intial touch from end of touch
-    var yDiff = yDown - yUp;
-
-
-}
-//     if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) { // most significant 
-//         if ( xDiff > 0 ) { 
-//             // left swipe
-//              if (parseInt($("#card-2017b").css('left'))>100) {
-//               $(".timeline-main").animate({
-//                // change position of timeline slides
-//                 left: "-=1180"
-//               }, 1500 ); }
-//               // change position of timeline dot
-//               if(parseInt($("#progress-line").css('width')) == 130)  { $("#progress-line").animate({ width: "505px" }, 1500); } /* 1947 --> 1970 */
-//               if(parseInt($("#progress-line").css('width')) == 505) { $("#progress-line").animate({ width: "590px" }, 1500); } /* 1970 --> 1975 */
-//               if(parseInt($("#progress-line").css('width')) == 590) { $("#progress-line").animate({ width: "730px" }, 1500); } /* 1975 --> 1984 */
-//               if(parseInt($("#progress-line").css('width')) == 730) { $("#progress-line").animate({ width: "790px" }, 1500); } /* 1984 --> 1988 */
-//               if(parseInt($("#progress-line").css('width')) == 790) { $("#progress-line").animate({ width: "800px" }, 1500); } /* 1988 --> 1989 */
-//               if(parseInt($("#progress-line").css('width')) == 800) { $("#progress-line").animate({ width: "907px" }, 1500); } /* 1989 --> 1995 */
-//               if(parseInt($("#progress-line").css('width')) == 907) { $("#progress-line").animate({ width: "940px" }, 1500); } /* 1995 --> 1997 */
-//               if(parseInt($("#progress-line").css('width')) == 940) { $("#progress-line").animate({ width: "1017px" }, 1500); } /* 1997 --> 2001 */
-//               if(parseInt($("#progress-line").css('width')) == 1017) { $("#progress-line").animate({ width: "1072px" }, 1500); } /* 2001 --> 2005 */
-//               if(parseInt($("#progress-line").css('width')) == 1072) { $("#progress-line").animate({ width: "1095px" }, 1500); } /* 2005 --> 2007 */
-//               if(parseInt($("#progress-line").css('width')) == 1095) { $("#progress-line").animate({ width: "1105px" }, 1500); } /* 2007 --> 2008 */
-//               if(parseInt($("#progress-line").css('width')) == 1105) { $("#progress-line").animate({ width: "1115px" }, 1000); } /* 2008 --> 2008a */
-//               if(parseInt($("#progress-line").css('width')) == 1115) { $("#progress-line").animate({ width: "1120px" }, 1500); } /* 2008a --> 2009 */
-//               if(parseInt($("#progress-line").css('width')) == 1120) { $("#progress-line").animate({ width: "1177px" }, 1500); } /* 2009 --> 2011 */
-//               if(parseInt($("#progress-line").css('width')) == 1177) { $("#progress-line").animate({ width: "1192px" }, 1500); } /* 2011 --> 2012 */
-//               if(parseInt($("#progress-line").css('width')) == 1192) { $("#progress-line").animate({ width: "1197px" }, 1500); } /* 2012 --> 2013 */
-//               if(parseInt($("#progress-line").css('width')) == 1197) { $("#progress-line").animate({ width: "1207px" }, 1500); }  2013 --> 2014 
-//               if(parseInt($("#progress-line").css('width')) == 1207) { $("#progress-line").animate({ width: "1237px" }, 1500); } /* 2014 --> 2016 */
-//               if(parseInt($("#progress-line").css('width')) == 1237) { $("#progress-line").animate({ width: "1257px" }, 1500); } /* 2016 --> 2017 */
-//               if(parseInt($("#progress-line").css('width')) == 1257) { $("#progress-line").animate({ width: "1260px" }, 1500); } /* 2017 --> 2017a */
-//               if(parseInt($("#progress-line").css('width')) == 1260) { $("#progress-line").animate({ width: "1262px" }, 1500); } /* 2017a --> 2017b */
-//               if(parseInt($("#progress-line").css('width')) == 1262) { $("#progress-line").animate({ width: "1262px" }, 1500); } /* 2017b --> ?? */
-
-//         } else {
-//             // right swipe
-//             if (parseInt($("#card-1947").css('left'))<100) {
-//               $(".timeline-main").animate({
-//                 // change position of timeline slides
-//                 left: "+=1180"
-//               }, 1500 ); }
-//               // change position of timeline dot
-//               if(parseInt($("#progress-line").css('width')) == 505)  { $("#progress-line").animate({ width: "130px" }, 1500); } /* 1970 --> 1947 */
-//               if(parseInt($("#progress-line").css('width')) == 590) { $("#progress-line").animate({ width: "505px" }, 1500); }
-//               if(parseInt($("#progress-line").css('width')) == 730) { $("#progress-line").animate({ width: "590px" }, 1500); }
-//               if(parseInt($("#progress-line").css('width')) == 790) { $("#progress-line").animate({ width: "730px" }, 1500); }
-//               if(parseInt($("#progress-line").css('width')) == 800) { $("#progress-line").animate({ width: "790px" }, 1500); }
-//               if(parseInt($("#progress-line").css('width')) == 907) { $("#progress-line").animate({ width: "800px" }, 1500); }
-//               if(parseInt($("#progress-line").css('width')) == 940) { $("#progress-line").animate({ width: "907px" }, 1500); }
-//               if(parseInt($("#progress-line").css('width')) == 1017) { $("#progress-line").animate({ width: "940px" }, 1500); }
-//               if(parseInt($("#progress-line").css('width')) == 1072) { $("#progress-line").animate({ width: "1017px" }, 1500); }
-//               if(parseInt($("#progress-line").css('width')) == 1095) { $("#progress-line").animate({ width: "1072px" }, 1500); }
-//               if(parseInt($("#progress-line").css('width')) == 1105) { $("#progress-line").animate({ width: "1095px" }, 1500); }
-//               if(parseInt($("#progress-line").css('width')) == 1115) { $("#progress-line").animate({ width: "1105px" }, 1500); }
-//               if(parseInt($("#progress-line").css('width')) == 1120) { $("#progress-line").animate({ width: "1115px" }, 1500); }
-//               if(parseInt($("#progress-line").css('width')) == 1177) { $("#progress-line").animate({ width: "1120px" }, 1500); }
-//               if(parseInt($("#progress-line").css('width')) == 1192) { $("#progress-line").animate({ width: "1177px" }, 1500); }
-//               if(parseInt($("#progress-line").css('width')) == 1197) { $("#progress-line").animate({ width: "1192px" }, 1500); }
-//               if(parseInt($("#progress-line").css('width')) == 1207) { $("#progress-line").animate({ width: "1197px" }, 1500); }
-//               if(parseInt($("#progress-line").css('width')) == 1237) { $("#progress-line").animate({ width: "1207px" }, 1500); }
-//               if(parseInt($("#progress-line").css('width')) == 1257) { $("#progress-line").animate({ width: "1237px" }, 1500); }
-//               if(parseInt($("#progress-line").css('width')) == 1260) { $("#progress-line").animates({ width: "1257px" }, 1500); }
-//               if(parseInt($("#progress-line").css('width')) == 1262) { $("#progress-line").animate({ width: "1260px" }, 1500); }
-//               if(parseInt($("#progress-line").css('width')) == 1262) { $("#progress-line").animate({ width: "1262px" }, 1500); }
-//        }              
-//     } 
-//     // reset values
-//     xDown = null;
-//     yDown = null; 
-//     setTimeout(function(){ touchFire = true; evt.preventDefault(); }, delay)
-//   } else { return; }
-
-};
-
-
-
-
 (function($) {
 
 
@@ -468,7 +360,7 @@ function handleTouchMove(evt) {
       items: ['1940 Image'],
       frequency: 0,
       intermediate: !0,
-      init_sections: 0,
+      init_sections: 10,
       snap: !0,
       label: '',
       sections: true,
