@@ -2,6 +2,8 @@
 <html>
 <head>
 <title>Timelines</title>
+<script src="jquery.ui.touch-punch.min.js"></script>
+
 <link rel="stylesheet" type="text/css"  href="explore-styles.css">
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
@@ -752,6 +754,7 @@ $('.container-timeline').slimSlider({
     'snap': !0
    
 });
+$('.ui-slider-handle').draggable();
 
 
 </script>
