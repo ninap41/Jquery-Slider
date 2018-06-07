@@ -10,7 +10,7 @@ body {
   width: 100%;
 	margin: 0;
   overflow: hidden;
-  zoom: 67%;
+  /* zoom: 67%; */
 }
 
 
@@ -1105,7 +1105,7 @@ tspan {
     z-index: 10;
 }
 
-.progress-line {
+/* .progress-line {
   background-color: #ffffff;
   height: 5px;
   position: absolute;
@@ -1121,7 +1121,7 @@ tspan {
   top: -44px;
   float: right;
   height: 92px;
-}
+} */
 /*
 .progress-line:after {
   content: url(assets/dot.svg);
@@ -1130,7 +1130,7 @@ tspan {
     top: -40px;
 }*/
 
-.progress-line-2010 {
+/* .progress-line-2010 {
   background-color: #ffffff;
   height: 5px;
   width: 83%;
@@ -1145,25 +1145,25 @@ tspan {
   position: relative;
     left: 1564px;
     top: -40px;
-}
+} */
 
-.main-line {
+/* .main-line {
   background-color: #57778b;
   height: 5px;
   width: 1285px;
   position: absolute;
   top: 35px;
   left: 45px;
-}
+} */
 
-.line-marker {
+/* .line-marker {
   height: 35px;
   width: 3px;
   background-color: #57778b;
   position: relative;
   bottom: 5px;
   left: 21px;
-}
+} */
 
 .marker-year {
   color: #ffffff;
@@ -1218,7 +1218,7 @@ tspan {
   position: relative;
   display: inline-block;
   width: 65100px;
-  left: 1000px;
+  /* left: 1000px; */
 }
 
 .timeline-main {
@@ -1301,7 +1301,7 @@ tspan {
 .timeline-container {
   margin: 0 auto;
   box-sizing: border-box;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .timeline-side-detail {
@@ -1372,11 +1372,11 @@ tspan {
 /*My styles*/
 /*My styles*/
 /*My styles*/
-*, *:before, *:after {
+/* *, *:before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-}
+} */
 /* .marker-year{
   display: inline-block;
 
@@ -1388,6 +1388,11 @@ tspan {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+* {
+  -webkit-touch-callout: none;
+  user-select:none
 }
 
 .slider {
@@ -1508,6 +1513,7 @@ tspan {
 }
 .ui-slider .ui-slider-handle{
   height: 30px;   
+
 } 
 
 .slider .bubble {
