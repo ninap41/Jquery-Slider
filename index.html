@@ -308,19 +308,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praes
 </div>
 	
 <div>
-<!-- <div class="timeline">
-	<div class="marker-year d2020"><div class="line-marker"></div>2020</div>
-	<div class="marker-year d2010"><div class="line-marker"></div>2010</div>
-	<div class="marker-year d2000"><div class="line-marker"></div>2000</div>
-	<div class="marker-year d1990"><div class="line-marker"></div>1990</div>
-	<div class="marker-year d1980"><div class="line-marker"></div>1980</div>
-	<div class="marker-year d1970"><div class="line-marker"></div>1970</div>
-	<div class="marker-year d1960"><div class="line-marker"></div>1960</div>
-	<div class="marker-year d1950"><div class="line-marker"></div>1950</div>
-	<div class="marker-year d1940"><div class="line-marker"></div>1940</div>
-	<div id="progress-line" class="progress-line" style="width: 130.1px;"><img src="assets/dot.svg"></div>
-	<div class="main-line"></div>
-</div> -->
 
 <div class="timeline">
 
@@ -718,6 +705,7 @@ set_bubble_text(slider, slider.settings.items[n]);
 
 //SLIDER LIBRARY named ITEMS_PIX with animation values based on year.
 
+
       var items_pix = [['1947','0px','.5'], ['1970', '-1150px','.7'], ['1975', '-2350px','.7'],
       ['1984', '-3560px'], ['1988', '-4750px'], ['1989', '-5950px'], ['1995', '-7155px'],
       ['1997', '-8350px'], ['2001', '-9560px'],['2005', '-10750px'], ['2007', '-11950px'],
@@ -731,16 +719,39 @@ set_bubble_text(slider, slider.settings.items[n]);
             $(`#timeline-container li:nth-child(${i+2})`).css({ opacity: `.5` }, 500);
           }
        
-        }
+      }
+      console.log(slider.settings.items[n]);
+      $(".container-tl").click(function(e){
+          var pWidth = $(this).innerWidth(); //use .outerWidth() if you want borders
+          var pOffset = $(this).offset(); 
+          var x = e.pageX - pOffset.left;
+            if(pWidth/2 > x) {
+            //   e.stopPropagation();
+            //   n = n - 1;
+            //  set_section(slider, n) 
+            //  n = n +1
+            }
+            else {
+            //   e.stopPropagation();
+
+            //   n = n + 1;
+            //  set_section(slider, n) 
+             
+            }
+        });
+
+      
+      
   
 
       }
+   
 
       activate(sliders[sliderID].settings.init_sections, sliderID);
 
     });
   }
-
+ 
 
 
 
@@ -778,6 +789,7 @@ $('.ui-slider-handle').draggable({
      axis: "x",
     containment: "parent"
 });
+
 
 
 </script>
